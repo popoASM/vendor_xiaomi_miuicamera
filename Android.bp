@@ -18,6 +18,11 @@ android_app_import {
     ],
     presigned: true,
     privileged: true,
+    preprocessed: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    skip_preprocessed_apk_checks: true,
     system_ext_specific: true,
     required: [
         "privapp-permissions-miuicamera.xml",
@@ -28,6 +33,9 @@ android_app_import {
     name: "MiuiExtraPhoto",
     apk: "prebuilt/MiuiExtraPhoto/MiuiExtraPhoto.apk",
     certificate: "media",
+    dex_preopt: {
+        enabled: false,
+    },
     system_ext_specific: true,
     uses_libs: ["org.apache.http.legacy"],
 }
